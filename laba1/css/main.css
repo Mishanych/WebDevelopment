@@ -1,0 +1,168 @@
+body{
+    margin: 0;
+    padding: 0;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+
+header, .middle, footer{
+    margin: 0;
+    padding: 0;
+}
+header, footer{
+    width: auto;
+    height: 25%;
+}
+
+
+
+.middle{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 50%;
+}
+.middle_right_wrapper
+{
+    width: 25%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+.middle_left_wrapper{
+    width: 75%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.cont2-3{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+h4,.text_box{
+    background-color: #bebcb7;
+    border: 1.5px black solid;
+    width: 35%;
+    height: auto;
+    font-size: 24px;
+    margin: 6px;
+    padding: 6px;
+    justify-content: center;
+    font-style: italic;
+    word-break: keep-all;
+}
+
+#imag_1{
+
+    border: solid black 1px;
+    margin: 10px;
+}
+
+#imag_2{
+
+    border: solid black 1px;
+    width: 20%;
+    height: 100%;
+
+}
+
+#imag_3{
+    border: solid black 1px;
+    margin: 10px;
+}
+
+
+
+#box1, #box6 {
+    word-break: break-all;
+    overflow-x:auto;
+    overflow-y:auto;
+    background-color: #a3b9ea;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1.5px black solid;
+}
+
+
+#box2, #box4{
+    background-color: #d9c4ac;
+}
+
+#box2, #box3, #box4, #box5{
+    border: 1.5px black solid;
+    margin: 0;
+    padding: 0;
+    word-break: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#box1{
+    text-align: right;
+}
+
+#box2 {
+    width: 35%;
+    height: auto;
+    align-items: flex-end;
+    justify-content: center;
+    text-decoration-color: #a3b9ea;
+}
+
+#box3{
+    width: auto;
+    height: 100%;
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-indent: 5%;
+}
+
+#box4{
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#box5{
+    width: auto;
+    height:25%;
+    background-color: #9dc998;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: center;
+}
+ul,ol{
+    margin-right: 5%;
+    font-size: 30px;
+}
+a{
+    text-decoration: none;
+}
+
+
