@@ -19,14 +19,19 @@
         <main class = "middle">
             <div class="middle_left_wrapper">
                 <div class="cont2-3">
-                    <aside id="box2">
+                    <aside id="box2" onmouseover="changeToItalic(this)">
                         <ol>
-                            <li> <a href="Basketball.html">Basketball</a></li>
-                            <li> <a href="Football.html">Football</a></li>
-                            <li> <a href="Volleyball.html">Volleyball</a></li>
-                            <li> <a href="Hockey.html">Hockey</a></li>
-                            <li> <a href="Tennis.html">Tennis</a></li>
+                            <li> <a id="page1" href="Basketball.html">Basketball</a></li>
+                            <li> <a id="page2" href="Football.html">Football</a></li>
+                            <li> <a id="page3" href="Volleyball.html">Volleyball</a></li>
+                            <li> <a id="page4" href="Hockey.html">Hockey</a></li>
+                            <li> <a id="page5" href="Tennis.html">Tennis</a></li>
                         </ol>
+                        <label id="save_style">Save style option?</label>
+                        <form id="save_form">
+                            <input type='radio' name="save_option" id="save_option_yes" onchange="Save()" value="1"/> Yes
+                            <input type='radio' name="save_option" id="save_option_no" onchange="Save()" value="0"/> No
+                        </form>
                     </aside>
                     <div id="box3">
                         <p>
@@ -56,7 +61,24 @@
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                             deserunt mollit anim id est laborum.
                         </p>
-
+                        <p id="rhombus_area">Rhombus area formula: (Diagonal_1 * Diagonal_2)/2 = (10 * 4)/2</p>
+                        <form name="rhombus_res" action="">
+                            <label>Result of calculating math: </label>
+                            <input name="result_area" id="resultOfArea" type="text" value="" size="6">
+                            <button type="button" onclick="CountArea()">Result</button>
+                        </form>
+                        <br>
+                        <p id="triangle_possibility">Please, enter lengths of sides of triangle and check if it is possible</p>
+                        <form>
+                            <label>a:</label>
+                            <input name="side_input" id="sideInput1" type="number" value="" size="6"></input>
+                            <label>b:</label>
+                            <input name="side_input" id="sideInput2" type="number" value="" size="6"></input>
+                            <label>c:</label>
+                            <input name="side_input" id="sideInput3" type="number" value="" size="6"></input>
+                            <button type="button" id="checkButton" onclick="CheckSidesOfTriangle()">Check</button>
+                        </form>
+                        <br>
                     </div>
                 </div>
                 <div id="box5">
@@ -72,6 +94,14 @@
 
                         For the man himself, though, this is a completely new experience. He joined Barcelona as a boy, aged 13. Now 34, he and his young family are adjusting to a new life in a city he had last visited in December 2019, when he called in to pick up his record sixth Ballon d'Or.
                     </p>
+                    <form>
+                        <label>Add to list:</label>
+                        <input id="list_input" type="text" value="" size="6"></input>
+                        <button type="button" id="addToListButton" onclick="AddElementToList()">Add element</button>
+                        <ol id="list"></ol>
+                        <button type="button" id="save_list" onclick="SaveList()">Save</button>
+                        <button type="button" id="delete_list" onclick="DeleteList()">Delete</button>
+                    </form>
                 </div>
             </section>
         </main>
@@ -85,5 +115,6 @@
             </div>
         </footer>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>

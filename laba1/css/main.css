@@ -164,5 +164,11 @@ ul,ol{
 a{
     text-decoration: none;
 }
+p{
+    padding: 5px;
+}
+#save_style, #save_form{
+    margin-right: 30px;
+}
 
 
