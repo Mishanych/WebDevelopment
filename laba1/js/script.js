@@ -158,6 +158,7 @@ function StartStyle()
 var list = document.getElementById("list");
 var counter = 1;
 var listOfElements = [];
+var loadedCounter = 1;
 StartList();
 
 function AddElementToList(){
@@ -173,6 +174,7 @@ function AddElementToList(){
     }
 
     list.innerHTML = listOfElements.join('');
+
     counter += 1;
     document.getElementById("list_input").value = "";
 }
@@ -186,6 +188,7 @@ function isEven(value) {
 
 function SaveList(){
     localStorage.setItem("list", JSON.stringify(listOfElements));
+    localStorage.setItem("counter", counter);
 }
 function DeleteList(){
     delete localStorage.list;
@@ -195,4 +198,8 @@ function StartList()
 {
     var storedList = JSON.parse(localStorage.getItem("list"));
     list.innerHTML = storedList.join('');
+    if(storedList != null){
+        listOfElements = storedList;
+        counter = localStorage.getItem("counter");
+    }
 }
