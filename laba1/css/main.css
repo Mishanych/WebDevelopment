@@ -140,6 +140,7 @@ h4,.text_box{
     display: flex;
     flex-direction: column;
     text-indent: 5%;
+    padding-bottom: 20px;
 }
 
 #box4{

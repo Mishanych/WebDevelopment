@@ -158,7 +158,6 @@ function StartStyle()
 var list = document.getElementById("list");
 var counter = 1;
 var listOfElements = [];
-var loadedCounter = 1;
 StartList();
 
 function AddElementToList(){
@@ -203,3 +202,7 @@ function StartList()
         counter = localStorage.getItem("counter");
     }
 }
+
+
+//lab 3
+
