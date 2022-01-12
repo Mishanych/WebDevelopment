@@ -8,6 +8,7 @@ namespace WebLab3Api.Models
     {
         public int Id { get; set; }
         public int NumOfTabs { get; set; }
+        public string NameOfTabs { get; set; }
         public string ContentOfTabs { get; set; }
 
         internal AppDb Db { get; set; }
@@ -26,7 +27,7 @@ namespace WebLab3Api.Models
         public async Task InsertAsync()
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"INSERT INTO `parameters` (`Id`, `NumOfTabs`, `ContentOfTabs`) VALUES (@id, @numOfTabs, @contentOfTabs);";
+            cmd.CommandText = @"INSERT INTO `parameters` (`Id`, `NumOfTabs`, `NameOfTabs` `ContentOfTabs`) VALUES (@id, @numOfTabs, @nameOfTabs, @contentOfTabs);";
             BindParams(cmd);
             BindId(cmd);
             await cmd.ExecuteNonQueryAsync();
@@ -35,7 +36,7 @@ namespace WebLab3Api.Models
         public async Task UpdateAsync()
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"UPDATE `parameters` SET `NumOfTabs` = @numOfTabs, `ContentOfTabs` = @contentOfTabs WHERE `Id` = @id;";
+            cmd.CommandText = @"UPDATE `parameters` SET `NumOfTabs` = @numOfTabs, `NameOfTabs` = @nameOfTabs, `ContentOfTabs` = @contentOfTabs WHERE `Id` = @id;";
             BindParams(cmd);
             BindId(cmd);
             await cmd.ExecuteNonQueryAsync();
@@ -58,6 +59,12 @@ namespace WebLab3Api.Models
                 ParameterName = "@numOfTabs",
                 DbType = DbType.Int32,
                 Value = NumOfTabs,
+            });
+            cmd.Parameters.Add(new MySqlParameter
+            {
+                ParameterName = "@nameOfTabs",
+                DbType = DbType.Int32,
+                Value = NameOfTabs,
             });
             cmd.Parameters.Add(new MySqlParameter
             {

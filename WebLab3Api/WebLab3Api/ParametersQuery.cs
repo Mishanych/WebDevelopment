@@ -19,7 +19,7 @@ namespace WebLab3Api
         public async Task<Parameters> FindOneAsync(int id)
         {
             using var cmd = Db.Connection.CreateCommand();
-            cmd.CommandText = @"SELECT `Id`, `NumOfTabs`, `ContentOfTabs` FROM `parameters` WHERE `Id` = @id";
+            cmd.CommandText = @"SELECT `Id`, `NumOfTabs`, `NameOfTabs`, `ContentOfTabs` FROM `parameters` WHERE `Id` = @id";
             cmd.Parameters.Add(new MySqlParameter
             {
                 ParameterName = "@id",

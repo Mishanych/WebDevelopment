@@ -53,6 +53,7 @@ namespace WebLab3Api.Controllers
                 return new NotFoundResult();
 
             result.NumOfTabs = body.NumOfTabs;
+            result.NameOfTabs = body.NameOfTabs;
             result.ContentOfTabs = body.ContentOfTabs;
             await result.UpdateAsync();
 

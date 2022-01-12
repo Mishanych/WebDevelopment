@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel = stylesheet href="css/main.css">
+    <title>Laba1</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div id="box1">
+                <h4>All about Sport!</h4>
+                <map name="but1">
+                    <area shape="default" href="index.html" target = "_self">
+                </map>
+                <img usemap="#but1" id="imag_1" src="img/sportLabel.jpg" width="50" height="50">
+            </div>
+        </header>
+        <main class = "middle">
+            <div class="middle_left_wrapper">
+                <div class="cont2-3">
+                    <aside id="box2">
+                        <ol>
+                            <li> <a id="page1" href="Basketball.html">Basketball</a></li>
+                            <li> <a id="page2" href="Football.html">Football</a></li>
+                            <li> <a id="page3" href="Volleyball.html">Volleyball</a></li>
+                            <li> <a id="page4" href="Hockey.html">Hockey</a></li>
+                            <li> <a id="page5" href="Tennis.html">Tennis</a></li>
+                        </ol>
+                        <label id="save_style">Save style option?</label>
+                        <form id="save_form">
+                            <input type='radio' name="save_option" id="save_option_yes" onchange="Save()" value="1"/> Yes
+                            <input type='radio' name="save_option" id="save_option_no" onchange="Save()" value="0"/> No
+                        </form>
+                    </aside>
+                    <div id="box3">
+                        <div id="work" class="workArea none">
+                            <div id="controls" class="controls">
+                                <span id="notifications">Notifications</span>
+                                <button id="start-btn" type="Start">Start</button>
+                                <button id="close-btn" type="Close">Close</button>
+                            </div>
+
+
+                            <div class="anim-wrappper">
+                                <div id='animation' class="anim"></div>
+
+                                <div id="square1" class="square1"></div>
+                                <div id="square2" class="square2"></div>
+
+                                <div class="background">
+                                    <div class="tree-background"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="box5">
+                    <img id="imag_2" src="img/liveNews.jpg" width="200" height="100">
+                </div>
+            </div>
+            <section class = "middle_right_wrapper">
+                <div id="box4">
+
+                    <p>
+                        When 150,000 Lionel Messi shirts went on sale on Paris St-Germain's website the day his signing was announced, they were gone within seven minutes.
+
+                        PSG have been here before, when Neymar signed about four years earlier, but it's fair to say even they were surprised by the excitement that has greeted the arrival of Argentine superstar Messi.
+
+                        For the man himself, though, this is a completely new experience. He joined Barcelona as a boy, aged 13. Now 34, he and his young family are adjusting to a new life in a city he had last visited in December 2019, when he called in to pick up his record sixth Ballon d'Or.
+                    </p>
+                    <button id="play-btn">Play</button>
+                    <ul class="eventList" id="storageInfo"></ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="box6">
+                <div class="text_box">
+                    See you soon!:)
+                </div>
+                <img id="imag_3" src="img/bye.jpg" width="250" height="150">
+
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lab4.js"></script>
+</body>
+</html>
